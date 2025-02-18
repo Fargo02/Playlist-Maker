@@ -10,7 +10,7 @@
 <img src="search.png" alt="Поиск" width="23%"/>  <img src="favourite.png" alt="Избранные треки" width="23%"/>  <img src="playlist.png" alt="Плейлисты" width="23%"/>  <img src="settings.png" alt="Настройки" width="23%"/> 
 
 ## API
-Приложение использует [iTunes API](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/Searching.html#//apple_ref/doc/uid/TP40017632-CH5-SW1) для поиска музыки и получения данных о треках. Это позволяет пользователям находить треки по названию, артисту или альбому и прослушивать короткие фрагменты перед добавлением в плейлист.
+Приложение использует [API iTunes](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/Searching.html#//apple_ref/doc/uid/TP40017632-CH5-SW1) для поиска музыки и получения данных о треках. Это позволяет пользователям находить треки по названию, артисту или альбому и прослушивать короткие фрагменты перед добавлением в плейлист.
 
 ## Используемые технологии и библиотеки
 - **Firebase**: для отслеживания активности.
