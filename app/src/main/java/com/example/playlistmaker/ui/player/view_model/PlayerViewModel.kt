@@ -52,7 +52,6 @@ class PlayerViewModel(
     init {
         playerInteractor.prepare(track.previewUrl!!, listener)
         checkIsFavouriteTrack(track.trackId)
-
     }
 
     private val stateLiveDataFavourite = MutableLiveData<Boolean>()

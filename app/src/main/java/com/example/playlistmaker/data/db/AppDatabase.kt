@@ -10,12 +10,15 @@ import com.example.playlistmaker.data.db.entity.PlaylistEntity
 import com.example.playlistmaker.data.db.entity.SaveTrackEntity
 import com.example.playlistmaker.data.db.entity.TrackFavouriteEntity
 
-@Database(version = 1, entities = [
-    TrackFavouriteEntity::class,
-    HistoryTrackEntity::class,
-    PlaylistEntity::class,
-    SaveTrackEntity::class
-])
+@Database(
+    version = 1,
+    entities = [
+        TrackFavouriteEntity::class,
+        HistoryTrackEntity::class,
+        PlaylistEntity::class,
+        SaveTrackEntity::class
+    ],
+)
 abstract class AppDatabase: RoomDatabase() {
 
     abstract fun trackFavouriteDao(): TrackFavouriteDao

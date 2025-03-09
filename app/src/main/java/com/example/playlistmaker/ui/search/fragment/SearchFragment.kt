@@ -1,5 +1,6 @@
 package com.example.playlistmaker.ui.search.fragment
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -37,13 +38,14 @@ class SearchFragment(): BindingFragment<FragmentSearchBinding>() {
         return FragmentSearchBinding.inflate(inflater, container, false)
     }
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         savedText = EMPTY_STRING
 
         onTrackClickDebounce = debounce<Track>(CLICK_DEBOUNCE_DELAY, viewLifecycleOwner.lifecycleScope, false) { track ->
-                val json = Gson().toJson(track)
+            val json = Gson().toJson(track)
                 findNavController().navigate(
                     R.id.action_searchFragment_to_playerFragment,
                     PlayerFragment.createArgs(json)

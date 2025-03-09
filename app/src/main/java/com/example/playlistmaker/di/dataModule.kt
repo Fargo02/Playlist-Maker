@@ -2,6 +2,8 @@ package com.example.playlistmaker.di
 
 import android.media.MediaPlayer
 import androidx.room.Room
+import androidx.room.migration.Migration
+import androidx.sqlite.db.SupportSQLiteDatabase
 import com.example.playlistmaker.data.db.AppDatabase
 import com.example.playlistmaker.data.mapper.TracksResponseMapper
 import com.example.playlistmaker.data.search.NetworkClient

@@ -19,7 +19,7 @@ class HistoryTrackDbConverter {
             country = track.country,
             previewUrl = track.previewUrl,
             isFavorite = track.isFavorite,
-            currentTime = LocalDateTime.now().toString()
+            currentTime = LocalDateTime.now().toString(),
         )
     }
 

@@ -16,8 +16,7 @@ interface PlaylistDao {
     @Insert(entity = PlaylistEntity::class, onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertPlaylist(playlist: PlaylistEntity)
 
-    @Insert(entity = SaveTrackEntity::class, onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insertTrack(track: SaveTrackEntity)
+
 
     @Update(entity = PlaylistEntity::class)
     suspend fun updatePlaylist(playlist: PlaylistEntity)
@@ -55,6 +54,9 @@ interface PlaylistDao {
         count = count + 1 WHERE id = :playlistId
         """)
     suspend fun addTrackToPlaylist(trackId: String, playlistId: Long)
+
+    @Insert(entity = SaveTrackEntity::class, onConflict = OnConflictStrategy.IGNORE)
+    suspend fun insertTrack(track: SaveTrackEntity)
 
     @Transaction
     suspend fun insertTrackAndPlaylist(track: SaveTrackEntity, trackId: String, playlistId: Long) {

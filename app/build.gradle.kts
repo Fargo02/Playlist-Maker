@@ -1,8 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("kotlin-kapt")
     id("com.google.gms.google-services")
+    id("org.jetbrains.kotlin.kapt")
 }
 
 android {
@@ -54,7 +54,7 @@ android {
 }
 
 dependencies {
-    //MockK
+    //MockK 1.12.3
     androidTestImplementation ("io.mockk:mockk-android:1.12.3")
     testImplementation ("io.mockk:mockk:1.12.3")
 
